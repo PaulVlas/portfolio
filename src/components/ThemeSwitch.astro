@@ -23,12 +23,13 @@
 
 <script>
   const defaultTheme = localStorage.getItem("theme");
+  const input = document.querySelector("[data-theme-toggle]");
 
   if (defaultTheme) {
+    const checkbox = input as HTMLInputElement;
     document.querySelector("html")?.setAttribute("data-theme", defaultTheme);
+    checkbox.checked = defaultTheme === "light";
   }
-
-  const input = document.querySelector("[data-theme-toggle]");
 
   input?.addEventListener("change", function (event) {
     const target = event.target as HTMLInputElement;
