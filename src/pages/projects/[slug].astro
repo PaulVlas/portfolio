@@ -22,7 +22,7 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={project.title}>
-  <main class='md:flex md:justify-center'>
+  <main class='md:flex md:justify-center mt-20'>
     <article class='prose prose-lg max-w-[750px] prose-img:mx-auto'>
       {
         project.heroImage && (
@@ -32,7 +32,7 @@ const { Content } = await entry.render();
             format='webp'
             src={project.heroImage}
             alt={project.title}
-            class='w-full mb-6'
+            class='w-full mb-6 rounded-md'
           />
         )
       }
