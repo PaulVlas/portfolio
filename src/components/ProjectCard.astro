@@ -17,6 +17,7 @@ const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
       project.heroImage && (
         <figure>
           <Image
+            loading='lazy'
             width={422}
             height={750}
             src={images[project.heroImage]()}
