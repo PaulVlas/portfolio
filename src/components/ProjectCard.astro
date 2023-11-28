@@ -8,18 +8,23 @@ interface Props {
 const { entry } = Astro.props;
 
 const project: Project = entry.data;
+const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
 ---
 
 <div class='card max-w-sm bg-base-100 shadow-xl transition ease-in-out hover:scale-[102%]'>
-  <figure>
-    <Image
-      width={422}
-      height={750}
-      src={project.heroImage!}
-      alt={project.title}
-      class='rounded-xl overflow-hidden'
-    />
-  </figure>
+  {
+    project.heroImage && (
+      <figure>
+        <Image
+          width={422}
+          height={750}
+          src={images[project.heroImage]()}
+          alt={project.title}
+          class='rounded-xl overflow-hidden'
+        />
+      </figure>
+    )
+  }
 
   <div class='card-body items-center text-center grow w-full'>
     <div>

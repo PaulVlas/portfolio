@@ -2,7 +2,7 @@
 title: "Project 1"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 date: "2023"
-heroImage: "/src/content/project/project-1.jpg"
+heroImage: "/src/assets/project-1.jpg"
 tags: ["Next.js", "React", "TailwindCSS", "TypeScript"]
 ---
 
