@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+const projects = (await getCollection("project")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<div class='bg-base-200 p-10 text-center space-y-10 flex flex-col justify-center'>
+  <h1 class='font-bold text-2xl'>Projects</h1>
+  <ul class='md:timeline md:timeline-vertical grid md:gap-0 gap-4 py-10'>
+    {
+      projects.map((project, i) => (
+        <li class='md:max-h-96'>
+          <hr class='hidden md:inline-block' />
+
+          {i % 2 === 0 && (
+            <div class='timeline-start md:mr-5 lg:mr-10 xl:mr-20 flex justify-center'>
+              <ProjectCard entry={project} />
+            </div>
+          )}
+          <div class='timeline-middle hidden md:inline-block'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              class='w-5 h-5'
+            >
+              <path
+                fill-rule='evenodd'
+                d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                clip-rule='evenodd'
+              />
+            </svg>
+          </div>
+          {i % 2 !== 0 && (
+            <div class='timeline-end md:ml-5 lg:ml-10 xl:ml-20 flex justify-center'>
+              <ProjectCard entry={project} />
+            </div>
+          )}
+          <hr class='hidden md:inline-block' />
+        </li>
+      ))
+    }
+  </ul>
+</div>
