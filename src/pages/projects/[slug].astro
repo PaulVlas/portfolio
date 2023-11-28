@@ -19,6 +19,8 @@ interface Props {
 const { entry } = Astro.props;
 const project: Project = entry.data;
 const { Content } = await entry.render();
+
+const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
 ---
 
 <Layout title={project.title}>
@@ -30,7 +32,7 @@ const { Content } = await entry.render();
             width={750}
             height={422}
             format='webp'
-            src={project.heroImage}
+            src={images[project.heroImage]()}
             alt={project.title}
             class='w-full mb-6 rounded-md'
           />
