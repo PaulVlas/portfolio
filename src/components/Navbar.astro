@@ -2,7 +2,7 @@
 import ThemeSwitch from "./ThemeSwitch.astro";
 ---
 
-<div class='navbar fixed z-50 h-20 lg:px-10'>
+<div class='navbar fixed z-50 h-20 lg:px-10 bg-base-100 lg:bg-transparent'>
   <div class='flex flex-1'>
     <div class='flex-none'>
       <label for='mobile-drawer' class='btn btn-ghost drawer-button lg:hidden'
@@ -23,7 +23,7 @@ import ThemeSwitch from "./ThemeSwitch.astro";
       >
     </div>
     <div class='flex-1'>
-      <a href='/' class='btn btn-ghost text-xl bg-base-100/25'>
+      <a href='/' class='btn btn-ghost text-xl bg-base-100/25 backdrop-blur-sm'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
@@ -40,11 +40,11 @@ import ThemeSwitch from "./ThemeSwitch.astro";
     </div>
   </div>
 
-  <div class='flex-none flex gap-5'>
+  <div class='flex-none flex gap-5 bg-base-100/25 backdrop-blur-sm p-2 rounded-md'>
     <a
       href='https://www.linkedin.com/in/paul-vlaswinkel'
       target='_blank'
-      class='text-base-content/60 h-6 w-6'
+      class='text-base-content/60 h-6 w-6 hover:text-base-content/75'
       ><svg
         xmlns='http://www.w3.org/2000/svg'
         fill='currentColor'
