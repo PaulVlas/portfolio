@@ -35,6 +35,7 @@ const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
             format='webp'
             src={images[project.heroImage]()}
             alt={project.title}
+            loading='eager'
             class='w-full mb-6 rounded-md'
           />
         )
