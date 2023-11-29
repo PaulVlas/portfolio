@@ -2,7 +2,7 @@
 title: "Gazemap"
 description: "Developed an advanced web-based tool for eye movement data analysis, integrating diverse visualizations and interactive linking, with expertise gained in React, FastAPI, Firebase Auth, and D3.js."
 date: "2020-07"
-heroImage: "/src/assets/project-1.jpg"
+heroImage: "/src/assets/gazemap.jpg"
 tags: ["React", "MUI", "FastAPI", "D3", "Visualisations", "Authentication", "Firebase"]
 link: "https://www.researchgate.net/publication/351865089_The_Power_of_Linked_Eye_Movement_Data_Visualizations"
 linkText: "Paper"

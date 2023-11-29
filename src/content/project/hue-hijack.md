@@ -2,7 +2,7 @@
 title: "Hue Hijack"
 description: "Investigated vulnerabilities in the Phillips Hue lamp control protocol, exposing potential security risks, and developed a React and Express.js web interface to simulate attacks, showcasing insights gained in IoT security and web development"
 date: "2021-06"
-heroImage: "/src/assets/project-1.jpg"
+heroImage: "/src/assets/hue-hijack.jpg"
 tags: ["React", "MUI", "Express.js", "API", "Security"]
 link: "https://github.com/RinseV/hue-hijack"
 linkText: "Github"
