@@ -71,9 +71,7 @@ const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
       {
         project.tags &&
           project.tags.map((tag) => (
-            <a href={`/blog/tag/${tag}`} class='badge badge-outline ml-2 no-underline'>
-              {tag}
-            </a>
+            <span class='badge badge-outline ml-2 no-underline'>{tag}</span>
           ))
       }
       <div class='divider my-2'></div>
