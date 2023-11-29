@@ -9,6 +9,7 @@ export default {
     themes: [{
         light: {
           ...require("daisyui/src/theming/themes")["light"],
+					"primary": "#1962d7",
 					".hero-1": {
 						"color": "#1962d7"
 					},
