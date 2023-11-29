@@ -32,12 +32,12 @@ const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
       <div>
         <h2 class='card-title'>
           {project.title}
-          {project.badge && <div class='badge badge-secondary'>{project.badge}</div>}
+          {project.badge && <div class='badge badge-accent'>{project.badge}</div>}
         </h2>
         <h4 class='text-base-content/40 text-sm'>{project.date.getFullYear()}</h4>
       </div>
       <p>{project.description}</p>
-      <div class='card-actions justify-end mt-2'>
+      <div class='card-actions justify-center mt-2'>
         {project.tags?.map((tag) => <div class='badge badge-outline'>{tag}</div>)}
       </div>
     </div>
