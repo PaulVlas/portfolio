@@ -23,6 +23,7 @@ const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
             src={images[project.heroImage]()}
             alt={project.title}
             class='rounded-xl overflow-hidden'
+            aria-hidden='true'
           />
         </figure>
       )
