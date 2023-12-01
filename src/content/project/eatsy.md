@@ -3,7 +3,7 @@ title: "Eatsy"
 description: "Developed a user-friendly Android app, integrated with an Arduino using Bluetooth and NFC technology, to aid children with spastic cerebral palsy in practicing independent eating and holding items, embracing an agile methodology for effective project management."
 date: "2020-10"
 heroImage: "/src/assets/eatsy.jpg"
-tags: ["Android", "Java", "Bluetooth", "Arduino", "NFC", "Scrum"]
+tags: ["Android", "Java", "Kotlin", "Bluetooth", "Arduino", "NFC", "Scrum"]
 link: "https://youtu.be/nEICsZwfDBY"
 linkText: "Video"
 ---
