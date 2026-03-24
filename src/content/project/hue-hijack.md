@@ -39,5 +39,5 @@ This project delves into the intricacies of the Hue control protocol that govern
 ## Links
 
 - [Github Repository](https://github.com/RinseV/hue-hijack)
-- [Project Report](https://paulvlas.dev/content/hue-hijack-report.pdf)
+- [Project Report](https://p4ul.nl/content/hue-hijack-report.pdf)
 - [Project video](https://www.youtube.com/watch?v=9GdWuC-OoZU)

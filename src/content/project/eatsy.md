@@ -42,5 +42,5 @@ This project addresses the imperative need for assistive technology to enhance t
 
 ## Links
 
-- [Project Report](https://paulvlas.dev/content/eatsy-report.pdf)
+- [Project Report](https://p4ul.nl/content/eatsy-report.pdf)
 - [Project video](https://youtu.be/nEICsZwfDBY)

@@ -13,7 +13,7 @@ const projectSchema = z.object({
 		.refine((items) => new Set(items).size === items.length, {
 			message: "tags must be unique",
 		}),
-	link: z.string().url().optional(),
+	link: z.url().optional(),
 	linkText: z.string().optional(),
 });
 

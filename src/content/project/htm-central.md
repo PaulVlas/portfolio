@@ -1,7 +1,7 @@
 ---
 title: "HTM Central"
 description: "A Heelwork to Music show entry site. Organisers can host shows and competitors can enter their dogs in the shows."
-date: "2023"
+date: "2025"
 heroImage: "/src/assets/htm-central.jpg"
 badge: "WIP"
 tags:
