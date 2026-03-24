@@ -4,29 +4,44 @@ import Github from "./buttons/Github.astro";
 import Linkedin from "./buttons/Linkedin.astro";
 ---
 
-<div class='navbar fixed z-50 h-20 lg:px-10 bg-base-100 lg:bg-transparent'>
-  <div class='flex flex-1'>
-    <div class='flex-1'>
-      <a href='/' class='btn btn-ghost text-xl bg-base-100/25 backdrop-blur-sm'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          class='hidden lg:block'
-          ><path
-            fill='currentColor'
-            d='M20 19V7H4v12h16m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16m-7 14v-2h5v2h-5m-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59l3.99-4Z'
-          ></path></svg
-        >
-         Paul Vlaswinkel</a
-      >
-    </div>
-  </div>
+<header
+  id='site-nav'
+  class='fixed top-0 left-0 right-0 z-50 h-14 flex items-center px-8 sm:px-12 lg:px-20 border-b border-transparent transition-all duration-200'
+>
+  <a
+    href='/'
+    class='font-mono text-sm font-medium text-base-content/70 hover:text-base-content transition-colors duration-150 mr-auto'
+  >
+    paul<span class='text-primary'>.</span>dev
+  </a>
 
-  <div class='flex-none flex gap-5 bg-base-100/25 backdrop-blur-sm p-2 rounded-md'>
-    <Github />
-    <Linkedin />
+  <nav class='flex items-center gap-5' aria-label='Site navigation'>
+    <div class='hidden sm:flex items-center gap-5'>
+      <Github />
+      <Linkedin />
+    </div>
+    <div class='h-4 w-px bg-base-content/15 hidden sm:block'></div>
     <ThemeSwitch />
-  </div>
-</div>
+  </nav>
+</header>
+
+<style>
+  #site-nav {
+    background: oklch(var(--b1) / 0);
+  }
+  #site-nav.scrolled {
+    background: oklch(var(--b1) / 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-color: oklch(var(--bc) / 0.08);
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  function onScroll() {
+    nav?.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

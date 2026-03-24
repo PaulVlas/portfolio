@@ -2,48 +2,42 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ['Manrope', 'system-ui', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'monospace'],
+			},
+		},
 	},
 	plugins: [require("daisyui"), require('@tailwindcss/typography')],
 	daisyui: {
     themes: [{
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-					"primary": "#1962d7",
-					".hero-1": {
-						"color": "#1962d7"
-					},
-					".hero-2": {
-						"color": "#1b4ab1"
-					},
-					".hero-3": {
-						"color": "#16338c"
-					},
-					".hero-4": {
-						"color": "#0b1d69"
-					},
-					".hero-5": {
-						"color": "#000748"
-					},
+					"base-100": "#FFFFFF",
+					"base-200": "#F1F5F9",
+					"base-300": "#E2E8F0",
+					"base-content": "#0F172A",
+					"primary": "#0284C7",
+					"primary-content": "#FFFFFF",
+					"accent": "#0284C7",
+					"accent-content": "#FFFFFF",
+					"neutral": "#64748B",
+					"neutral-content": "#FFFFFF",
         },
       },{
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-					".hero-1": {
-						"color": "#506fd6"
-					},
-					".hero-2": {
-						"color": "#325dad"
-					},
-					".hero-3": {
-						"color": "#1f4b85"
-					},
-					".hero-4": {
-						"color": "#16385d"
-					},
-					".hero-5": {
-						"color": "#142538"
-					},
+					"base-100": "#0F172A",
+					"base-200": "#1E293B",
+					"base-300": "#334155",
+					"base-content": "#F1F5F9",
+					"primary": "#38BDF8",
+					"primary-content": "#0F172A",
+					"accent": "#38BDF8",
+					"accent-content": "#0F172A",
+					"neutral": "#94A3B8",
+					"neutral-content": "#0F172A",
         },
       }],
   },

@@ -3,12 +3,14 @@ import Github from "./buttons/Github.astro";
 import Linkedin from "./buttons/Linkedin.astro";
 ---
 
-<footer class='footer grid-cols-2 items-center p-4 bg-base-300 text-base-content'>
-  <aside class='items-center'>
-    <p>p4ul.nl - Paul Vlaswinkel's Portfolio</p>
-  </aside>
-  <nav class='gap-4 place-self-center justify-self-end flex'>
-    <Github />
-    <Linkedin />
-  </nav>
+<footer class='bg-base-200 border-t border-base-300 px-8 sm:px-12 lg:px-20 py-8'>
+  <div class='max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
+    <p class='font-mono text-sm text-base-content/40'>
+      paul<span class='text-primary'>.</span>dev &mdash; Paul Vlaswinkel
+    </p>
+    <nav class='flex items-center gap-5' aria-label='Footer navigation'>
+      <Github />
+      <Linkedin />
+    </nav>
+  </div>
 </footer>

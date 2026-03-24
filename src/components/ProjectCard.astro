@@ -2,45 +2,78 @@
 import type { CollectionEntry } from "astro:content";
 import type { Project } from "../content.config";
 import { Image } from "astro:assets";
+
 interface Props {
   entry: CollectionEntry<"project">;
 }
-const { entry } = Astro.props;
 
+const { entry } = Astro.props;
 const project: Project = entry.data;
-const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
 ---
 
-<a href={`/projects/${entry.id.replace(/\.(md|mdx)$/, "")}`}>
-  <div class='card max-w-sm bg-base-100 shadow-xl transition ease-in-out hover:scale-[102%]'>
+<a
+  href={`/projects/${entry.id.replace(/\.(md|mdx)$/, "")}`}
+  class='project-card group block rounded-lg overflow-hidden border border-base-300 bg-base-100 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg'
+  aria-label={project.title}
+>
+  <!-- Image -->
+  {
+    project.heroImage && (
+      <div class='overflow-hidden border-b border-base-300'>
+        <Image
+          loading='lazy'
+          width={600}
+          height={340}
+          src={images[project.heroImage]()}
+          alt={project.title}
+          class='w-full object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-[1.02]'
+        />
+      </div>
+    )
+  }
+
+  <!-- Content -->
+  <div class='p-5'>
+    <!-- Year + badge row -->
+    <div class='flex items-center justify-between mb-2'>
+      <span class='font-mono text-xs text-base-content/40'>
+        {project.date.getFullYear()}
+      </span>
+      {
+        project.badge && (
+          <span class='font-mono text-[10px] font-medium px-2 py-0.5 rounded bg-primary/10 text-primary'>
+            {project.badge}
+          </span>
+        )
+      }
+    </div>
+
+    <!-- Title -->
+    <h2 class='font-sans font-bold text-lg text-base-content mb-1.5 leading-snug tracking-tight'>
+      {project.title}
+    </h2>
+
+    <!-- Description -->
+    <p class='font-sans text-sm text-base-content/55 leading-relaxed mb-4 line-clamp-2'>
+      {project.description}
+    </p>
+
+    <!-- Tags -->
     {
-      project.heroImage && (
-        <figure>
-          <Image
-            loading='lazy'
-            width={422}
-            height={750}
-            src={images[project.heroImage]()}
-            alt={project.title}
-            class='rounded-xl overflow-hidden'
-            aria-hidden='true'
-          />
-        </figure>
+      project.tags && project.tags.length > 0 && (
+        <div class='flex flex-wrap gap-1.5'>
+          {project.tags.map((tag) => (
+            <span class='font-mono text-[11px] text-base-content/45 border border-base-content/12 rounded px-2 py-0.5'>
+              {tag}
+            </span>
+          ))}
+        </div>
       )
     }
-
-    <div class='card-body items-center text-center grow w-full'>
-      <div>
-        <h2 class='card-title'>
-          {project.title}
-          {project.badge && <div class='badge badge-accent'>{project.badge}</div>}
-        </h2>
-        <h4 class='text-base-content/40 text-sm'>{project.date.getFullYear()}</h4>
-      </div>
-      <p>{project.description}</p>
-      <div class='card-actions justify-center mt-2'>
-        {project.tags?.map((tag) => <div class='badge badge-outline'>{tag}</div>)}
-      </div>
-    </div>
   </div>
 </a>
+
+<style>
+  .project-card { text-decoration: none; }
+</style>
