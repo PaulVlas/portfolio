@@ -1,6 +1,6 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import { type Project } from "../../content/config";
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import { type Project } from "../../content.config";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Prose from "../../components/Prose.astro";
@@ -8,7 +8,7 @@ import Prose from "../../components/Prose.astro";
 export async function getStaticPaths() {
   const projectEntries = await getCollection("project");
   return projectEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id.replace(/\.(md|mdx)$/, "") },
     props: { entry },
   }));
 }
@@ -19,7 +19,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const project: Project = entry.data;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
 ---

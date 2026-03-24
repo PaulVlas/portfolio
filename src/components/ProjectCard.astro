@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import type { Project } from "../content/config";
+import type { Project } from "../content.config";
 import { Image } from "astro:assets";
 interface Props {
   entry: CollectionEntry<"project">;
@@ -11,7 +11,7 @@ const project: Project = entry.data;
 const images = import.meta.glob("/src/assets/*.{jpeg,jpg,png,gif}");
 ---
 
-<a href={`/projects/${entry.slug}`}>
+<a href={`/projects/${entry.id.replace(/\.(md|mdx)$/, "")}`}>
   <div class='card max-w-sm bg-base-100 shadow-xl transition ease-in-out hover:scale-[102%]'>
     {
       project.heroImage && (
