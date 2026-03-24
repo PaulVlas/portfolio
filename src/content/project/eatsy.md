@@ -1,6 +1,6 @@
 ---
 title: "Eatsy"
-description: "Developed a user-friendly Android app, integrated with an Arduino using Bluetooth and NFC technology, to aid children with spastic cerebral palsy in practicing independent eating and holding items, embracing an agile methodology for effective project management."
+description: "An Android app paired with an Arduino to help children with spastic cerebral palsy practice independent eating, using Bluetooth and NFC to bridge the hardware and software."
 date: "2020-10"
 heroImage: "/src/assets/eatsy.jpg"
 tags: ["Android", "Java", "Kotlin", "Bluetooth", "Arduino", "NFC", "Scrum"]
@@ -8,37 +8,22 @@ link: "https://youtu.be/nEICsZwfDBY"
 linkText: "Video"
 ---
 
-## Key Learnings
+## What I Built
 
-In spearheading the development of an assistive eating game for children with spastic cerebral palsy (CP), I gained valuable insights across multiple domains, showcasing proficiency in software development, hardware integration, and agile project management. Key learnings from this project include:
+A game where children with spastic cerebral palsy practice eating movements using a spoon fitted with an NFC chip. The Arduino detects which chip is near the scanner and reports back to an Android app over Bluetooth, which tracks progress and keeps kids engaged.
 
-- **Native Android App Development:** Developed a user-friendly Android app to facilitate the game, connecting seamlessly with both the Arduino and users' smartphones via Bluetooth.
+The hardware side was an Arduino with an NFC reader. The software side was a native Android app (Java/Kotlin) that handled the Bluetooth connection and the game logic.
 
-- **Bluetooth Integration:** Acquired skills in utilizing Bluetooth technology to establish communication between the app and the Arduino, ensuring a cohesive user experience.
+## What I Learned
 
-- **Arduino Programming:** Programmed the Arduino, incorporating an NFC scanner to detect selected NFC chips, enhancing the interactive elements of the game.
-
-- **NFC Technology:** Explored and implemented NFC technology on the Arduino, allowing the detection of specific NFC chips for a personalized user experience.
-
-- **Agile Project Management:** Learned and applied scrum methodologies in a team setting, working with a scrum master and participating in daily scrum meetings for effective project coordination.
-
-## Technologies Used
-
-### Hardware:
-
-- **Arduino:** Programmed the Arduino microcontroller for interaction with NFC technology.
-
-- **NFC Scanner:** Integrated an NFC scanner with the Arduino for detecting selected NFC chips.
-
-### Software:
-
-- **Native Android App:** Developed a user-friendly Android app to connect with the Arduino via Bluetooth and provide a seamless user interface.
-
-- **Bluetooth Technology:** Utilized Bluetooth for communication between the Android app and the Arduino, ensuring real-time interaction.
+- **Android + Bluetooth:** Pairing and maintaining a Bluetooth connection between a phone and a microcontroller has more edge cases than you'd expect: connection drops, re-pairing flows, latency.
+- **Arduino + NFC:** Wiring up and programming an NFC scanner wasn't something I'd done before. Getting reliable reads from specific chips took some trial and error.
+- **Building for real users:** Designing for children with motor difficulties forced me to think about interaction differently. Things that seem obviously usable aren't.
+- **Scrum in practice:** Daily standups and sprint reviews with a dedicated scrum master. Slower than just hacking, but the structure helped with a team of mixed experience levels.
 
 ## Abstract
 
-This project addresses the imperative need for assistive technology to enhance the lives of individuals with impairments, disabilities, or the elderly, enabling them to live independently in their private homes. The chosen solution focuses on a game designed to assist children with spastic cerebral palsy (CP) in practicing independent eating and holding items.
+Assistive technology for children with spastic cerebral palsy is often expensive, clinical, and not very engaging. This project built something that feels like a game while serving a real therapeutic purpose: practicing the motor movements involved in eating independently.
 
 ## Links
 

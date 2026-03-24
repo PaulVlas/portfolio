@@ -1,39 +1,24 @@
 ---
 title: "Fairground OpenGL"
-description: "Explored and applied computer graphics principles in the development of a Fairground OpenGL project, featuring a diverse environment with attractions, interactive elements, and advanced graphical enhancements."
+description: "A computer graphics assignment turned into a full virtual fairground: animated rides, Bezier-curve paths, fragment shaders, and both flying and first-person cameras."
 date: "2020-10"
 heroImage: "/src/assets/opengl.jpg"
 tags: ["Java", "OpenGL", "Maven", "Shaders", "Bezier"]
 ---
 
-## Key Learnings
+## What I Built
 
-Undertaking the Fairground project equipped me with valuable insights into various aspects of computer graphics. Key learnings from this project include:
+A 3D fairground rendered in OpenGL (Java), built up through a series of increasingly complex exercises. By the end it had animated rides, a winding path made from cubic Bezier curves, textured surfaces, light poles with a toggleable night mode, and two camera modes (flying and first-person).
 
-- **OpenGL Framework:** Gained hands-on experience with the OpenGL framework, exploring its capabilities for rendering graphics and managing scenes.
+## What I Learned
 
-- **Maven Project Setup:** Set up and worked with a Maven project, providing a streamlined development process and ensuring project consistency.
-
-- **Geometric Object Rendering:** Developed skills in rendering geometric objects within the scene, extending the GUI and incorporating interactive elements.
-
-- **Camera Implementations:** Implemented both a flying camera and a first-person camera, offering diverse perspectives within the virtual environment.
-
-- **Shader Programming:** Utilized fragment shaders for controlling surface properties, enhancing the visual appeal of rendered objects.
-
-- **Bezier Curves:** Implemented a winding, texture-mapped path using cubic Bezier curves, demonstrating a practical understanding of curve-based graphics.
-
-- **Lighting Techniques:** Positioned light poles and implemented a night mode with toggle functionality, exploring lighting effects for improved scene aesthetics.
-
-## Technologies Used
-
-The Fairground OpenGL project was undertaken using a combination of technologies to explore and implement various computer graphics concepts. The key technologies include:
-
-- **OpenGL:** Leveraged the OpenGL framework for rendering graphics and managing the virtual environment.
-
-- **Java and Maven:** Utilized Java for application development and Maven for project management, ensuring consistency and efficiency.
+- **OpenGL fundamentals:** Scene management, geometric object rendering, the matrix stack. The kind of low-level graphics knowledge that most frameworks hide from you.
+- **Fragment shaders:** Writing GLSL to control surface properties directly. Much more flexible than fixed-function lighting.
+- **Bezier curves in practice:** Implementing a texture-mapped path along a cubic Bezier curve required thinking carefully about parameterization and arc length.
+- **Camera systems:** A flying camera and a first-person camera have surprisingly different implementations and feel very different to use.
 
 ## Abstract
 
-The Fairground OpenGL project involved the exploration and application of computer graphics principles within the OpenGL framework. The assignment, structured into various exercises, provided hands-on experience in designing a fairground with animated attractions and surroundings.
+This was a university computer graphics assignment structured around incremental exercises. Starting from a basic scene, each stage added new concepts: geometry, animation, lighting, shaders, and curve-based geometry. The end result is a small but reasonably complete virtual environment.
 
 _Code available upon request_

@@ -1,40 +1,24 @@
 ---
 title: "TestING Advisor"
-description: "The TestING Advisor is a collaborative effort between ING and TU/e, leveraging the existing ING Test Maturity Model (iTMM). This tool serves as an assessment platform for teams and individuals to evaluate their software testing capabilities and receive actionable advice for improvement."
+description: "A collaboration between ING and TU/e: an assessment tool that helps software teams evaluate their testing maturity against ING's internal model and get concrete advice on where to improve."
 date: "2022-07"
 heroImage: "/src/assets/testing-advisor.jpg"
 tags: ["React", "MUI", "Nestjs", "Prisma", "SQL", "CI/CD", "Scrum", "Testing"]
 ---
 
-## Key Learnings
+## What I Built
 
-In the development of the TestING Advisor, a collaborative project between International Netherlands Group (ING) and Eindhoven University of Technology (TU/e), I played a pivotal role in setting up and managing the CI/CD pipeline and contributing to the backend. Key learnings from this project include:
+A web platform where software teams can assess their testing practices against ING's Test Maturity Model (iTMM) and get targeted recommendations. I focused on the backend (NestJS + Prisma + PostgreSQL) and set up the full CI/CD pipeline.
 
-- **CI/CD Pipeline Management:** Gained extensive experience in setting up and managing a robust CI/CD pipeline for a project with multiple team members, incorporating various tools for static analysis, automatic dependency updating, and code coverage.
+## What I Learned
 
-- **Documentation Practices:** Familiarized myself with official documentation formats such as Acceptance Test, Acceptance Test Plan, and User Requirements Document, contributing to a comprehensive understanding of project requirements.
-
-- **Testing Coverage:** Emphasized the importance of maintaining testing coverage above 80%, reinforcing the significance of code quality and correctness.
-
-- **Large Groups Collaboration:** Explored the challenges and benefits of implementing Scrum in a large group setting, gaining insights into effective collaboration and project management. This includes doing code reviews and daily scrum meetings to ensure the quality of our work.
+- **CI/CD at team scale:** Setting up a pipeline for a larger group means thinking about more than just builds. I added static analysis (DeepScan), automatic dependency updates (Renovate), and coverage tracking (Codecov + GitHub Actions).
+- **Formal documentation:** First time writing things like an Acceptance Test Plan and a User Requirements Document. More useful than I expected.
+- **Code coverage discipline:** We kept coverage above 80% throughout. It caught real bugs that would have slipped through otherwise.
+- **Scrum in a large group:** Daily standups and structured code reviews kept the team aligned, but also slowed things down in ways that were instructive.
 
 ## Abstract
 
-The TestING Advisor is a collaborative effort between ING and TU/e, leveraging the existing ING Test Maturity Model (iTMM). This tool serves as an assessment platform for teams and individuals to evaluate their software testing capabilities and receive actionable advice for improvement.
+The TestING Advisor is built on ING's existing Test Maturity Model, giving teams a structured way to see where they stand and what to work on next. The frontend is React; the backend is NestJS with Prisma for database access.
 
-### Technologies Used
-
-- **Frontend (React):** Although I primarily focused on backend development, the frontend was developed using React, incorporating modern web development practices.
-
-- **Backend (Nestjs with Prisma):** The backend forms the core of the TestING Advisor, developed using Nestjs for building scalable and maintainable server-side applications. Prisma was used as a library for efficient interactions with the PostgreSQL database.
-
-- **Continuous Integration/Continuous Development (CI/CD):**
-  - **Static Analysis (DeepScan):** Ensures code quality through static analysis for JavaScript.
-  - **Automatic Dependency Updating (Renovate):** Streamlines the process of keeping dependencies up-to-date.
-  - **Code Coverage (Codecov, GitHub Actions):** Monitors and ensures code coverage across the project.
-
-### Project Management and Collaboration
-
-The project fostered an environment for extensive collaboration, emphasizing Scrum methodologies in a large group setting. As the member with the most experience in the frameworks used, I actively contributed to code reviews for the frontend and played a key role in the backend development.
-
-This project not only enhanced my technical skills but also provided valuable insights into project management, collaborative software development, and the intricacies of maintaining a robust CI/CD pipeline in a team-oriented environment.
+As the most experienced person on the team with the tech stack, I spent a lot of time reviewing frontend PRs and helping others get unstuck, which turned out to be as valuable as the technical work itself.
